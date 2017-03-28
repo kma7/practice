@@ -25,12 +25,6 @@ let redirectFailMsg = (results) => {
   migrationModules = migrationModule.started,
   excelLocation = `${appDir}/excel/${env.toLowerCase()}/${country.toLowerCase()}-redirects.xlsx`
 
-try {
-  fs.statSync(excelLocation).isFile()
-} catch (e) {
-  console.log(`No redirect test for ${country}`);
-  return
-}
 let urls = excelParser(excelLocation),
   promiseArr = []
 if (process.env.GITHUB_TOKEN) {
