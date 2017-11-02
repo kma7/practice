@@ -36,9 +36,9 @@ if (process.env.GITHUB_TOKEN) {
           "Authorization": `token ${process.env.GITHUB_TOKEN}`,
           "accept": "application/vnd.github.v3.raw+json"
         }
-        // create promise which gets json for redirect rule from url given
-        // then pushes it into an array so that it can be resolved
-        // using Promise all
+      /** create promise which gets json for redirect rule from url given
+       * then pushes it into an array so that it can be resolved
+       */ using Promise all
       let result = new Promise((resolve, reject) => {
         request.get(option, (err, response, body) => {
           if (!err) {
